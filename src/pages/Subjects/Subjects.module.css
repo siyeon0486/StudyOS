@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.subjectCard {
+  padding: 18px;
+}
+
+.subjectCard h2 {
+  margin: 0 0 8px;
+  color: var(--green-900);
+}
+
+.subjectCard p {
+  color: var(--muted);
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+}

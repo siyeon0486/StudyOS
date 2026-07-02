@@ -1,0 +1,114 @@
+.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  color: white;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.dateBlock {
+  font-family: Georgia, "Times New Roman", serif;
+  padding: 4px 10px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.weekday {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.day {
+  font-size: 74px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.month {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: grid;
+  gap: 7px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+}
+
+.navItem:hover,
+.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+.sideCard,
+.timerCard {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 15px;
+}
+
+.sideCardHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.sideCard label {
+  display: block;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.timerCard {
+  margin-top: auto;
+}
+
+.timer {
+  font-size: 42px;
+  text-align: center;
+  margin: 16px 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.timerCard button {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px;
+  background: var(--paper);
+  color: var(--green-900);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    height: auto;
+    position: static;
+    background: var(--green-900);
+  }
+
+  .day {
+    font-size: 52px;
+  }
+}

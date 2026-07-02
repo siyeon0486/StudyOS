@@ -1,0 +1,72 @@
+.scheduleCard {
+  padding: 18px;
+  min-height: 0;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.cardHeader button {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 9px;
+  padding: 8px 11px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.table {
+  max-height: 370px;
+  overflow: auto;
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  min-height: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.time {
+  padding: 9px 4px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.slot {
+  padding: 2px 0;
+}
+
+.event {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-left: 4px solid var(--green-700);
+  background: linear-gradient(90deg, #e6f1e5, #f6f8f2);
+  border-radius: 8px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.event strong {
+  display: block;
+  font-size: 13px;
+}
+
+.event span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}

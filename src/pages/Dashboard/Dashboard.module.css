@@ -1,0 +1,31 @@
+.dashboard {
+  display: grid;
+  gap: 12px;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.1fr 0.75fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+  .topGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topGrid > :last-child {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .topGrid > :last-child {
+    grid-column: auto;
+  }
+}

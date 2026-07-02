@@ -1,0 +1,26 @@
+.appShell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background:
+    linear-gradient(110deg, var(--green-900) 0 270px, var(--cream) 270px 100%);
+}
+
+.main {
+  padding: 18px 22px 22px 0;
+  min-width: 0;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+@media (max-width: 900px) {
+  .appShell {
+    display: block;
+    background: var(--cream);
+  }
+
+  .main {
+    padding: 12px;
+    max-height: none;
+  }
+}
