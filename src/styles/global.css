@@ -3,26 +3,11 @@ body {
   color: var(--text);
   background: var(--cream);
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+a { color: inherit; text-decoration: none; }
 .card {
   background: rgba(255, 253, 247, 0.97);
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
 }
-
-.pageTitle {
-  margin: 0 0 14px;
-  font-size: 28px;
-  color: var(--green-900);
-}
-
-.placeholderPage {
-  display: grid;
-  gap: 14px;
-}
+.pageTitle { margin: 0 0 14px; font-size: 28px; color: var(--green-900); }

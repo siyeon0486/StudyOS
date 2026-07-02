@@ -1,25 +1,16 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-}
-
-.subjectCard {
-  padding: 18px;
-}
-
-.subjectCard h2 {
-  margin: 0 0 8px;
-  color: var(--green-900);
-}
-
-.subjectCard p {
-  color: var(--muted);
-}
-
-.section {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid var(--line);
-  padding: 12px 0;
-}
+.page { height: calc(100vh - 44px); display: grid; grid-template-columns: 220px 1fr; gap: 22px; }
+.list { background: rgba(255,253,247,.78); border-radius: var(--radius-lg); padding: 18px; box-shadow: var(--shadow); }
+.list h1 { margin: 0 0 14px; color: var(--green-900); }
+.list a { display: block; padding: 12px; border-radius: 12px; margin-bottom: 8px; color: var(--muted); font-weight: 800; }
+.list a:hover, .active { background: var(--soft-green); color: var(--green-900) !important; }
+.workspace { padding: 22px; overflow: auto; }
+.workspace h2 { margin: 0 0 6px; color: var(--green-900); }
+.workspace p { color: var(--muted); }
+.sectionGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 16px; }
+.sectionCard { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: white; }
+.sectionCard strong { display: block; margin-bottom: 4px; }
+.sectionCard span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+.taskLine { display: grid; grid-template-columns: 1fr 125px; gap: 8px; align-items: center; border-top: 1px solid var(--line); padding: 8px 0; }
+.taskLine label { font-size: 13px; color: var(--muted); }
+.taskLine input[type="date"] { border: 1px solid var(--line); border-radius: 8px; padding: 6px; font-size: 12px; }
+@media (max-width: 960px) { .page { height: auto; grid-template-columns: 1fr; } }

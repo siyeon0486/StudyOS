@@ -1,19 +1,23 @@
+import { BookOpen, CalendarDays, Code2, Home, RotateCcw, Settings, ClipboardList } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import { BookOpen, CalendarDays, ChartColumn, ClipboardList, Home, RotateCcw, Settings } from "lucide-react";
+import ExamMini from "../ExamMini/ExamMini.jsx";
+import { useStudy } from "../../context/StudyContext.jsx";
 import { getSidebarDate } from "../../utils/dates";
 import styles from "./Sidebar.module.css";
 
 const navItems = [
   { to: "/", label: "Dashboard", icon: Home },
   { to: "/subjects", label: "Subjects", icon: BookOpen },
-  { to: "/study-plan", label: "Study Plan", icon: CalendarDays },
+  { to: "/study-plan", label: "Study Plan", icon: ClipboardList },
+  { to: "/calendar", label: "Calendar", icon: CalendarDays },
   { to: "/review", label: "Review", icon: RotateCcw },
-  { to: "/statistics", label: "Statistics", icon: ChartColumn },
+  { to: "/coding", label: "Coding", icon: Code2 },
   { to: "/settings", label: "Settings", icon: Settings },
 ];
 
-function Sidebar() {
+export default function Sidebar() {
   const date = getSidebarDate();
+  const { data } = useStudy();
 
   return (
     <aside className={styles.sidebar}>
@@ -26,17 +30,9 @@ function Sidebar() {
       <nav className={styles.nav}>
         {navItems.map((item) => {
           const Icon = item.icon;
-
           return (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.to === "/"}
-              className={({ isActive }) =>
-                isActive ? `${styles.navItem} ${styles.active}` : styles.navItem
-              }
-            >
-              <Icon size={20} />
+            <NavLink key={item.to} to={item.to} end={item.to === "/"} className={({ isActive }) => isActive ? `${styles.navItem} ${styles.active}` : styles.navItem}>
+              <Icon size={18} />
               <span>{item.label}</span>
             </NavLink>
           );
@@ -44,32 +40,13 @@ function Sidebar() {
       </nav>
 
       <section className={styles.sideCard}>
-        <div className={styles.sideCardHeader}>
-          <strong>이번 주 목표</strong>
-          <span>7.2 - 7.8</span>
-        </div>
-
-        <label>
-          <input type="checkbox" defaultChecked />
-          IELTS Reading Test 4까지
-        </label>
-        <label>
-          <input type="checkbox" defaultChecked />
-          OR Chapter 5
-        </label>
-        <label>
-          <input type="checkbox" />
-          연극 무대 디자인 초안
-        </label>
+        <div className={styles.sideCardHeader}><strong>이번 주 목표</strong><span>7.2 - 7.8</span></div>
+        <label><input type="checkbox" defaultChecked /> 연구 Related Work</label>
+        <label><input type="checkbox" /> TOEFL Reading</label>
+        <label><input type="checkbox" /> 전공 Simplex 복습</label>
       </section>
 
-      <section className={styles.timerCard}>
-        <strong>집중 타이머</strong>
-        <div className={styles.timer}>25:00</div>
-        <button>시작하기</button>
-      </section>
+      <ExamMini exam={data.exams[0]} />
     </aside>
   );
 }
-
-export default Sidebar;

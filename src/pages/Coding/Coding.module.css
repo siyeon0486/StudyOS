@@ -1,0 +1,24 @@
+.page { height: calc(100vh - 44px); display: grid; grid-template-columns: 360px 1fr; gap: 22px; }
+.left, .detail { padding: 20px; min-height: 0; overflow: auto; }
+.header h1 { margin: 0; color: var(--green-900); }
+.header p { margin: 6px 0 14px; color: var(--muted); }
+.addBox { display: grid; grid-template-columns: 1fr 70px; gap: 8px; margin-bottom: 10px; }
+.addBox input, .search, .metaGrid input, .metaGrid select, textarea, .titleInput { border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: white; }
+.addBox button, .actions button, .actions a { border: 1px solid var(--line); background: var(--green-900); color: white; border-radius: 10px; padding: 10px; font-weight: 800; text-align: center; }
+.search { width: 100%; margin-bottom: 12px; }
+.problemList { display: grid; gap: 8px; }
+.problemItem { text-align: left; border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: white; }
+.problemItem strong { display: block; }
+.problemItem span { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.problemItem em { display: inline-block; margin-top: 8px; font-style: normal; background: var(--soft-green); color: var(--green-900); border-radius: 999px; padding: 4px 8px; font-size: 11px; font-weight: 900; }
+.active { outline: 2px solid var(--green-700); }
+.detailTop { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+.titleInput { font-size: 24px; font-weight: 900; color: var(--green-900); width: 100%; }
+.detailTop p { color: var(--muted); margin: 8px 0 0; }
+.actions { display: flex; gap: 8px; }
+.metaGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+.metaGrid label, .memoGrid label, .codeBox { display: grid; gap: 6px; font-weight: 800; }
+.memoGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.memoGrid textarea { min-height: 110px; resize: vertical; }
+.codeBox textarea { min-height: 280px; font-family: Consolas, monospace; line-height: 1.5; resize: vertical; background: #10251c; color: #eef8f1; }
+@media (max-width: 1000px) { .page { height: auto; grid-template-columns: 1fr; } .metaGrid, .memoGrid { grid-template-columns: 1fr; } }

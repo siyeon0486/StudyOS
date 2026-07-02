@@ -1,12 +1,7 @@
-.panel {
-  padding: 22px;
-}
-
-.panel h2 {
-  margin: 0 0 8px;
-  color: var(--green-900);
-}
-
-.panel p {
-  color: var(--muted);
-}
+.page { height: calc(100vh - 44px); overflow: auto; }
+.columns { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 22px; }
+.columns section { padding: 20px; }
+.columns h2 { margin: 0 0 12px; color: var(--green-900); }
+.columns p { padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+.columns b { color: var(--green-900); margin-right: 6px; }
+@media (max-width: 960px) { .page { height: auto; } .columns { grid-template-columns: 1fr; } }

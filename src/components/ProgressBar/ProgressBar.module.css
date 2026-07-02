@@ -1,0 +1,1 @@
+.progress { height: 10px; border-radius: 999px; background: #dbe4d8; overflow: hidden; } .progress div { height: 100%; background: var(--green-900); }

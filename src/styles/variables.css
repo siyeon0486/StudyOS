@@ -1,19 +1,17 @@
 :root {
+  --green-950: #003321;
   --green-900: #00472e;
   --green-800: #07573b;
   --green-700: #14684a;
   --green-500: #3c8c61;
-
   --cream: #f5f1e8;
   --paper: #fffdf7;
+  --white: #ffffff;
   --soft-green: #eef5ed;
-
   --text: #0d1b15;
   --muted: #68776f;
   --line: #dfe8de;
-
-  --shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
   --radius-lg: 18px;
   --radius-md: 12px;
-  --radius-sm: 8px;
 }

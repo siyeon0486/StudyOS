@@ -1,26 +1,18 @@
 .appShell {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 260px 1fr;
-  background:
-    linear-gradient(110deg, var(--green-900) 0 270px, var(--cream) 270px 100%);
+  grid-template-columns: 252px minmax(0, 1fr);
+  background: var(--cream);
 }
 
 .main {
-  padding: 18px 22px 22px 0;
   min-width: 0;
-  max-height: 100vh;
-  overflow: auto;
+  height: 100vh;
+  overflow: hidden;
+  padding: 22px 26px;
 }
 
-@media (max-width: 900px) {
-  .appShell {
-    display: block;
-    background: var(--cream);
-  }
-
-  .main {
-    padding: 12px;
-    max-height: none;
-  }
+@media (max-width: 960px) {
+  .appShell { display: block; }
+  .main { height: auto; overflow: visible; padding: 14px; }
 }

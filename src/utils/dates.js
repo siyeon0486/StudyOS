@@ -2,17 +2,13 @@ import dayjs from "dayjs";
 
 export function getSidebarDate() {
   const now = dayjs();
-
-  return {
-    weekday: now.format("dddd"),
-    day: now.format("DD"),
-    month: now.format("MMMM"),
-  };
+  return { weekday: now.format("dddd"), day: now.format("DD"), month: now.format("MMMM") };
 }
 
 export function getDday(date) {
-  const today = dayjs().startOf("day");
-  const target = dayjs(date).startOf("day");
+  return dayjs(date).startOf("day").diff(dayjs().startOf("day"), "day");
+}
 
-  return target.diff(today, "day");
+export function todayISO() {
+  return dayjs().format("YYYY-MM-DD");
 }
