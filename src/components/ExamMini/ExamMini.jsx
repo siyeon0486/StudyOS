@@ -10,8 +10,6 @@ export default function ExamMini({ exam }) {
       <p>{exam.title}</p>
       <ProgressBar value={percent} />
       <small>{exam.completed} / {exam.total} 완료 · {percent}%</small>
-      <div className={styles.due}><b>D-3</b><span>전공 과제 제출</span></div>
-      <div className={styles.due}><b>D-7</b><span>TOEFL 모의고사</span></div>
     </section>
   );
 }

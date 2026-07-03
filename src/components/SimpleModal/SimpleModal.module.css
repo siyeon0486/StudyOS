@@ -1,0 +1,36 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(0,0,0,.32);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.modal {
+  width: min(560px, 100%);
+  background: var(--paper);
+  border-radius: 20px;
+  box-shadow: 0 20px 70px rgba(0,0,0,.24);
+  padding: 22px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.head h2 {
+  margin: 0;
+  color: var(--green-900);
+}
+
+.head button {
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  font-weight: 900;
+}

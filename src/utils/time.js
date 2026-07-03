@@ -1,6 +1,6 @@
 export const DAY_START = 8;
 export const DAY_END = 23;
-export const HOUR_HEIGHT = 54;
+export const HOUR_HEIGHT = 44;
 export const MIN_DURATION = 0.5;
 
 export function formatHour(value) {
@@ -12,4 +12,16 @@ export function formatHour(value) {
 export function yToTime(y) {
   const raw = DAY_START + y / HOUR_HEIGHT;
   return Math.max(DAY_START, Math.min(DAY_END - MIN_DURATION, Math.round(raw * 2) / 2));
+}
+
+export function timeStringToNumber(time) {
+  if (!time) return null;
+  const [hour, minute] = time.split(":").map(Number);
+  return hour + minute / 60;
+}
+
+export function numberToTimeInput(value) {
+  const hour = Math.floor(value);
+  const minute = Math.round((value - hour) * 60);
+  return `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
 }

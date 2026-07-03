@@ -1,24 +1,10 @@
-.sidebar {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  color: white;
-  padding: 22px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  background: var(--green-900);
-  overflow: hidden;
-}
+.sidebar { height: 100vh; position: sticky; top: 0; color: white; padding: 22px 16px; display: flex; flex-direction: column; gap: 14px; background: var(--green-900); overflow: hidden; }
 .dateBlock { font-family: Georgia, "Times New Roman", serif; padding: 2px 8px 12px; border-bottom: 1px solid rgba(255,255,255,.18); flex-shrink: 0; }
-.weekday { font-size: 22px; font-weight: 900; line-height: 1; }
-.day { font-size: 54px; font-weight: 900; line-height: .95; letter-spacing: -2px; }
-.month { font-size: 17px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
-.nav { display: grid; gap: 5px; flex-shrink: 0; }
-.navItem { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 12px; color: rgba(255,255,255,.88); font-size: 14px; }
-.navItem:hover, .active { background: rgba(255,255,255,.15); color: white; }
-.sideCard { border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); border-radius: 16px; padding: 12px; flex-shrink: 0; }
-.sideCardHeader { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; margin-bottom: 8px; }
-.sideCard label { display: block; margin: 7px 0; font-size: 12px; }
-@media (max-height: 760px) { .sideCard { display: none; } }
-@media (max-width: 960px) { .sidebar { height: auto; position: static; } }
+.weekday { font-size: 22px; font-weight: 900; line-height: 1; } .day { font-size: 54px; font-weight: 900; line-height: .95; letter-spacing: -2px; } .month { font-size: 17px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+.nav { display: grid; gap: 5px; flex-shrink: 0; } .navItem { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 12px; color: rgba(255,255,255,.88); font-size: 14px; } .navItem:hover, .active { background: rgba(255,255,255,.15); color: white; }
+.sideCard, .examList { border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); border-radius: 16px; padding: 12px; flex-shrink: 0; color: white; text-align: left; }
+.sideCardHeader, .examListHead { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; margin-bottom: 8px; } .sideCardHeader button, .examListHead button { border: 0; border-radius: 8px; padding: 2px 8px; background: white; color: var(--green-900); font-weight: 900; }
+.sideCard label { display: grid; grid-template-columns: 18px 1fr 20px; align-items: center; gap: 4px; margin: 7px 0; font-size: 12px; } .sideCard label button { border: 0; background: transparent; color: white; font-weight: 900; }
+.examList { display: grid; gap: 7px; } .examBox { width: 100%; cursor: pointer; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); border-radius: 12px; padding: 10px; color: white; text-align: left; } .examHead { display: flex; justify-content: space-between; align-items: center; gap: 8px; } .examHead strong { font-size: 13px; } .examHead span { font-size: 15px; font-weight: 900; } .examBox small { display: block; color: rgba(255,255,255,.72); margin-top: 4px; }
+.modalForm { display: grid; gap: 10px; color: var(--text); } .modalForm label { display: grid; gap: 6px; font-weight: 900; } .modalForm button { border: 1px solid var(--line); background: var(--green-900); color: white; border-radius: 10px; padding: 11px; font-weight: 900; } .modalActions { display: flex; gap: 8px; justify-content: flex-end; }
+@media (max-height: 760px) { .sideCard { display: none; } } @media (max-width: 960px) { .sidebar { height: auto; position: static; } }

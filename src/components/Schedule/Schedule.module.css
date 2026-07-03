@@ -1,14 +1,16 @@
-.scheduleCard { padding: 18px; min-height: 0; height: 100%; }
-.cardHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.scheduleCard { padding: 18px; min-height: 0; height: 100%; overflow: hidden; }
+.cardHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; }
 .cardHeader h2 { margin: 0; font-size: 19px; }
-.cardHeader span { color: var(--muted); font-size: 12px; font-weight: 800; }
-.calendar { display: grid; grid-template-columns: 62px 1fr; height: 300px; overflow: hidden; border-top: 1px solid var(--line); }
-.timeCol { height: 300px; overflow: hidden; }
-.time { height: 54px; padding-top: 7px; color: var(--muted); font-size: 12px; font-weight: 800; border-bottom: 1px solid var(--line); }
-.grid { position: relative; height: 300px; overflow-y: auto; background: rgba(255,255,255,.42); }
-.hourLine { height: 54px; border-bottom: 1px solid var(--line); pointer-events: none; }
-.event { position: absolute; left: 8px; right: 8px; border-left: 4px solid var(--green-700); background: linear-gradient(90deg,#e6f1e5,#f6f8f2); border-radius: 8px; padding: 7px 10px; user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,.07); }
+.dateNav { display: flex; align-items: center; gap: 8px; color: var(--green-900); font-weight: 900; font-size: 13px; }
+.dateNav button { border: 1px solid var(--line); background: white; border-radius: 9px; width: 30px; height: 30px; font-weight: 900; color: var(--green-900); }
+.calendar { display: grid; grid-template-columns: 62px 1fr; height: 270px; overflow: hidden; border-top: 1px solid var(--line); }
+.timeCol { height: 270px; overflow: hidden; }
+.time { height: 44px; padding-top: 7px; color: var(--muted); font-size: 12px; font-weight: 800; border-bottom: 1px solid var(--line); }
+.grid { position: relative; height: 270px; overflow-y: auto; overflow-x: hidden; background: rgba(255,255,255,.42); }
+.hourLine { height: 44px; border-bottom: 1px solid var(--line); pointer-events: none; }
+.event { position: absolute; left: 8px; right: 8px; border-left: 4px solid var(--green-700); border-radius: 8px; padding: 7px 34px 7px 10px; user-select: none; cursor: grab; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,.07); }
 .event strong { display: block; font-size: 13px; }
 .event em { display: block; margin-top: 2px; font-size: 11px; color: var(--muted); font-style: normal; }
+.deleteBtn { position: absolute; right: 6px; top: 5px; border: 0; background: rgba(255,255,255,.7); border-radius: 999px; width: 20px; height: 20px; font-weight: 900; }
 .resizeHandle { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; border: 0; background: transparent; cursor: ns-resize; }
 .resizeHandle:hover { background: rgba(0,0,0,.08); }

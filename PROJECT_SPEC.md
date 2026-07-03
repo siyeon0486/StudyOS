@@ -1,10 +1,17 @@
-# StudyOS Sprint 5
+# StudyOS Sprint 10
 
-## Included
-- Statistics removed from sidebar
-- Calendar page added
-- Coding page added
-- Default data reset to 연구 / TOEFL / OPIc / 전공 공부
-- Roadmap / Today / Calendar now use one unified Task source
-- Tasks can be assigned dates from Roadmap, Subjects, Calendar
-- Coding: add Programmers URL, auto-fill known title/level/tag presets, edit code/memo/status
+## Important
+This is a full src package, not a partial patch. It includes src/main.jsx.
+
+## Changed
+- Added full main/App structure
+- Study Plan is the unified subject/task planning page
+- Removed Review from the product flow
+- Dashboard simplified: Today Todo / Schedule / Today Log
+- Added reusable TaskModal
+- Dashboard, Calendar, Study Plan use same TaskModal
+- Calendar can add/edit tasks through modal
+- Study Plan subject pages include task planning and roadmap
+- English page includes sentence/meaning/expression/my example/memo/review
+- Coding page retained with problem list/code/memo/syntax preview
+- Settings progress panel updated

@@ -4,4 +4,3 @@
 .head span { font-size: 18px; font-weight: 900; }
 .examBox p { margin: 10px 0 8px; font-weight: 900; }
 .examBox small { display: block; color: rgba(255,255,255,.72); margin-top: 6px; }
-.due { display: grid; grid-template-columns: 42px 1fr; margin-top: 9px; font-size: 12px; }

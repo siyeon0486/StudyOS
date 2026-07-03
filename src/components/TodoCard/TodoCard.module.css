@@ -3,9 +3,10 @@
 .cardHeader h2 { margin: 0; font-size: 19px; }
 .cardHeader span { color: var(--muted); font-size: 13px; font-weight: 800; }
 .list { display: grid; gap: 8px; max-height: 280px; overflow: auto; padding-right: 2px; }
+.empty { color: var(--muted); background: white; border: 1px dashed var(--line); border-radius: 12px; padding: 18px; margin: 0; }
 .todoItem { min-height: 52px; display: grid; grid-template-columns: 22px 1fr auto; gap: 9px; align-items: center; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--line); background: white; }
 .todoItem input { width: 17px; height: 17px; margin: 0; }
-.todoText { display: grid; gap: 2px; }
+.todoText { display: grid; gap: 2px; text-align: left; border: 0; background: transparent; padding: 0; }
 .todoText strong { line-height: 1.1; font-size: 14px; }
 .todoText span { font-size: 12px; color: var(--muted); }
 .todoItem em { font-style: normal; color: var(--green-700); font-size: 12px; font-weight: 900; }

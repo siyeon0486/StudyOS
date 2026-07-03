@@ -1,7 +1,0 @@
-.page { height: calc(100vh - 44px); overflow: auto; }
-.panel { padding: 20px; }
-.panel h2 { margin: 0 0 14px; color: var(--green-900); }
-.reviewItem { display: grid; grid-template-columns: 24px 1fr; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: white; margin-bottom: 10px; }
-.reviewItem strong { display: block; }
-.reviewItem em { display: block; font-style: normal; color: var(--muted); font-size: 13px; margin-top: 4px; }
-.done { opacity: .55; text-decoration: line-through; }
